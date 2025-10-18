@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.14.0",
     "daisyui": "^5.1.14",
     "mongoose": "^8.18.2",
     "next": "15.5.3",
