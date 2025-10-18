@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Product 1",
+    "description": "This is the very short description of the product with ID 1",
+    "image": "https://picsum.photos/300/300?random=1",
+    "price": 10.00,
+    "status": "outofstock"
+  },
+  {
+    "id": 2,
+    "title": "Product 2",
+    "description": "This is the very short description of the product with ID 2",
+    "image": "https://picsum.photos/300/300?random=2",
+    "price": 20.00,
+    "status": "instock"
+  },
+  {
+    "id": 3,
+    "title": "Product 3",
+    "description": "This is the very short description of the product with ID 3",
+    "image": "https://picsum.photos/300/300?random=3",
+    "price": 15.00,
+    "status": "outofstock"
+  },
+  {
+    "id": 4,
+    "title": "Product 4",
+    "description": "This is the very short description of the product with ID 4",
+    "image": "https://picsum.photos/300/300?random=4",
+    "price": 30.00,
+    "status": "outofstock"
+  },
+  {
+    "id": 5,
+    "title": "Product 5",
+    "description": "This is the very short description of the product with ID 5",
+    "image": "https://picsum.photos/300/300?random=5",
+    "price": 5.00,
+    "status": "instock"
+  },
+  {
+    "id": 6,
+    "title": "Product 6",
+    "description": "This is the very short description of the product with ID 6",
+    "image": "https://picsum.photos/300/300?random=6",
+    "price": 25.00,
+    "status": "outofstock"
+  },
+  {
+    "id": 7,
+    "title": "Product 7",
+    "description": "This is the very short description of the product with ID 7",
+    "image": "https://picsum.photos/300/300?random=7",
+    "price": 10.00,
+    "status": "instock"
+  },
+  {
+    "id": 8,
+    "title": "Product 8",
+    "description": "This is the very short description of the product with ID 8",
+    "image": "https://picsum.photos/300/300?random=8",
+    "price": 80.00,
+    "status": "instock"
+  },
+  {
+    "id": 9,
+    "title": "Product 9",
+    "description": "This is the very short description of the product with ID 9",
+    "image": "https://picsum.photos/300/300?random=9",
+    "price": 10.00,
+    "status": "outofstock"
+  }
+]
