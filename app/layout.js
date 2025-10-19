@@ -4,7 +4,11 @@ import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: "Shop",
+  icons: {
+    icon: "/favicon.png"
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (

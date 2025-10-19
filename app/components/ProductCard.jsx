@@ -75,6 +75,10 @@ export default function ProductCard({ product }) {
     }
   };
 
+  const simulateAddToCart = () => {
+    alert('For demo purposes only!');
+  }
+
   return (
     <div className="card bg-base-100 w-96 shadow-sm">
       <figure className="px-10 pt-10">
@@ -87,7 +91,7 @@ export default function ProductCard({ product }) {
 
         <div className="card-actions">
           {product.status === "instock" ? (
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary" onClick={simulateAddToCart}>Buy Now</button>
           ) : loading ? (
             <button className="btn btn-disabled" disabled>
               Checking...

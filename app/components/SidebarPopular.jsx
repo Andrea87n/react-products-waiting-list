@@ -23,7 +23,7 @@ export default function SidebarPopular() {
   if (!data.length) return null;
 
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 p-4 h-screen sticky top-0 overflow-y-auto">
+    <aside className="w-full bg-white border-r border-gray-200 p-4 h-screen sticky top-0 overflow-y-auto order-2 md:w-64 md:order:1">
       <h2 className="font-semibold mb-3 text-gray-700">Most Requested</h2>
       <ul className="space-y-2 text-sm">
         {data.map((item) => (

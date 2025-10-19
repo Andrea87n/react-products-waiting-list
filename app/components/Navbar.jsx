@@ -15,6 +15,8 @@ export default function Navbar() {
     try {
       const res = await fetch(`/api/waitinglist?email=${userEmail}`);
       const data = await res.json();
+      console.log("Response from API:", data);
+
       if (data.ok && data.items) setWaitingList(data.items);
       else setWaitingList([]);
     } catch (err) {
@@ -25,7 +27,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex justify-between items-center px-4 py-3 border-b">
+    <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 px-4 py-3 border-b">
       <Link href="/" className="font-bold text-lg">
         Shop
       </Link>

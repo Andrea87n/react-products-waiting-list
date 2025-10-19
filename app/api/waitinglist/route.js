@@ -31,18 +31,25 @@ export async function GET(req) {
   try {
     await dbConnect();
     const { searchParams } = new URL(req.url);
-    const productId = searchParams.get("productId");
     const email = searchParams.get("email");
+    const productId = searchParams.get("productId");
 
-    if (!productId || !email)
-      return Response.json({ ok: false, message: "Missing data"}, { status: 400 });
+    if (!email)
+      return Response.json({ ok: false, message: "Missing email" }, { status: 400 });
 
-    const exists = await WaitingList.findOne({ productId, email });
+    let query = { email };
+    if (productId) query.productId = productId;
 
-    return Response.json({ ok: true, subscribed: !!exists });
+    const result = await WaitingList.find(query);
+
+    return Response.json({
+      ok: true,
+      items: result,
+      subscribed: productId ? !!result.length : undefined,
+    });
   } catch (error) {
     console.log("WAITINGLIST GET ERROR", error);
-    return response.json({ ok: false, error: error.message }, { status: 500 });
+    return Response.json({ ok: false, error: error.message }, { status: 500 });
   }
 }
 
@@ -64,6 +71,6 @@ export async function DELETE(req) {
 
   } catch (error) {
     console.log("WAITINGLIST DELETE ERROR", error);
-    return response.json({ ok: false, error: error.message }, { status: 500 });
+    return Response.json({ ok: false, error: error.message }, { status: 500 });
   }
 }
